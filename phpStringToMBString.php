@@ -83,8 +83,8 @@ function searchReplaceFileContent($file,$dry_run){
 	// in each run we ignore directories that has a dot in front
 	if($filecontent != $filecontent_tmp){
 		if($dry_run){
-			@mkdir(dirname($file).DIRECTORY_SEPARATOR.".mb_rewrite_result",0777,true); // @ to prevent warning if directory already exists
-			$target_file =	dirname($file).DIRECTORY_SEPARATOR.".mb_rewrite_result".DIRECTORY_SEPARATOR.basename($file);
+			@mkdir(dirname($file).DIRECTORY_SEPARATOR.".rewrite_result",0777,true); // @ to prevent warning if directory already exists
+			$target_file =	dirname($file).DIRECTORY_SEPARATOR.".rewrite_result".DIRECTORY_SEPARATOR.basename($file);
 		} else {
 			$target_file = $file;
 		}
